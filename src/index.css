@@ -1,0 +1,68 @@
+/* Pastel Kawaii 奶油粉+奶咖色主题色 */
+:root {
+  --kawaii-bg: #F6DDE3;
+  --kawaii-bg2: #F3E7E4;
+  --kawaii-card: #FFF8F9;
+  --kawaii-pink: #F6DDE3;
+  --kawaii-pink2: #F3E7E4;
+  --kawaii-brown-light: #C6A8A1;
+  --kawaii-brown: #9C7C72;
+  --kawaii-brown-dark: #5E4A44;
+  --kawaii-white: #FFF8F9;
+  --kawaii-shadow: 0 4px 32px 0 rgba(198,168,161,0.10);
+}
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'PingFang SC', 'HarmonyOS Sans', 'Helvetica Neue', 'Arial', 'Press Start 2P', cursive, sans-serif;
+  /* 柔和渐变叠加 polka dot pattern */
+  background-color: var(--kawaii-bg);
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.38) 1.5px, transparent 1.5px),
+    linear-gradient(135deg, var(--kawaii-bg) 60%, var(--kawaii-bg2) 100%);
+  background-size: 32px 32px, 100% 100%;
+  background-position: 0 0, 0 0;
+}
+
+/* 默认禁止文本选择 */
+body {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* 输入框恢复选择和菜单 */
+input, textarea {
+  -webkit-user-select: text;
+  user-select: text;
+  -webkit-touch-callout: default;
+  background: rgba(255,255,255,0.7);
+  border-radius: 12px;
+  box-shadow: 0 1px 4px 0 rgba(180,180,200,0.08);
+}
+
+/* 毛玻璃/玻璃拟态效果通用类 */
+.glass {
+  background: var(--kawaii-card, #FFF8F9);
+  box-shadow: var(--kawaii-shadow);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  border-radius: 24px;
+  border: 1.5px solid var(--kawaii-bg2, #F3E7E4);
+}
+
+/* 马卡龙色调辅助 */
+.pastel-purple { background: var(--kawaii-pink2) !important; }
+.pastel-pink { background: var(--kawaii-pink) !important; }
+.pastel-brown-light { background: var(--kawaii-brown-light) !important; }
+.pastel-brown { background: var(--kawaii-brown) !important; }
+.pastel-brown-dark { background: var(--kawaii-brown-dark) !important; }
+.pastel-white { background: var(--kawaii-white) !important; }
